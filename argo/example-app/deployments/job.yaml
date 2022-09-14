@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: playwright-test-job
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
     argocd.argoproj.io/syncwave: "1"    
 spec:
@@ -13,4 +13,4 @@ spec:
       - name: playwright-test-container
         image: argo-test:1.0.0-fail
       restartPolicy: Never
-  backoffLimit: 4
+  backoffLimit: 1
