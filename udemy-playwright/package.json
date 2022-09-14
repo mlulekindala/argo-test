@@ -4,7 +4,7 @@
   "description": "Automated software testing with Playwright",
   "main": "index.js",
   "scripts": {
-    "tests:pass": "npx playwright test  --project=Chromium --grep-invert @fail",
+    "tests:pass": "npx playwright test --project=Chromium --grep-invert @fail",
     "tests:fail": "npx playwright test --project=Chromium --grep @fail"
   },
   "author": "",

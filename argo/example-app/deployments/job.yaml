@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: playwright-test-job
+  annotations:
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/syncwave: "1"    
+spec:
+  template:
+    spec:
+      containers:
+      - name: playwright-test-container
+        image: argo-test:1.0.0-pass
+      restartPolicy: Never
+  backoffLimit: 4
