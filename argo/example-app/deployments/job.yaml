@@ -5,7 +5,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
-    argocd.argoproj.io/syncwave: "1"    
+    # argocd.argoproj.io/syncwave: "1"    
 spec:
   template:
     spec:
