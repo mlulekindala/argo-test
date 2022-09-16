@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: playwright-test-container
-        image: argo-test:1.0.0-fail
+        image: argo-test:1.0.0-pass
       restartPolicy: Never
   backoffLimit: 1
